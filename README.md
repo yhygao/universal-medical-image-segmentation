@@ -1,4 +1,4 @@
-# Universal Medical Image Segmentation [![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/pdf/2305.11147.pdf)
+# Universal Medical Image Segmentation [![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/pdf/2306.02416.pdf)
 
 <div align="center">
     <a><img src="figs/rutgers-logo.png"  height="100px" ></a>
