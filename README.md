@@ -5,7 +5,10 @@
 </div>
 
 
-This repository if the official implementation for the paper: [Training Like a Medical Resident: Universal Medical Image Segmentation via Context Prior Learning](https://arxiv.org/abs/2306.02416)
+This repository if the official implementation for the paper:
+> **[Training Like a Medical Resident: Universal Medical Image Segmentation via Context Prior Learning](https://arxiv.org/abs/2306.02416)** \
+> Yunhe Gao <sup>1</sup>, Zhuowei Li<sup>1</sup>, Di Liu <sup>1</sup>, Mu Zhou<sup>1</sup>, Shaoting Zhang<sup>2</sup>, Dimitris N. Metaxas <sup>1</sup> \
+> <sup>1</sup> Rutgers University <sup>2</sup> Shanghai Artificial Intelligence Laboratory \
 
 ![img](figs/training_paradigm.png)
 
