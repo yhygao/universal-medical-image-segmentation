@@ -1,4 +1,5 @@
-# Universal Medical Image Segmentation [![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/pdf/2306.02416.pdf)
+# Universal Medical Image Segmentation [![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/pdf/2306.02416.pdf) [![webpage](https://img.shields.io/badge/🖥-Website-9cf)](https://yunhegao.tech/Hermes-page/)
+<div align="center">
 
 <div align="center">
     <a><img src="figs/rutgers-logo.png"  height="100px" ></a>
@@ -7,8 +8,8 @@
 
 This repository if the official implementation for the paper:
 > **[Training Like a Medical Resident: Universal Medical Image Segmentation via Context Prior Learning](https://arxiv.org/abs/2306.02416)** \
-> Yunhe Gao <sup>1</sup>, Zhuowei Li<sup>1</sup>, Di Liu <sup>1</sup>, Mu Zhou<sup>1</sup>, Shaoting Zhang<sup>2</sup>, Dimitris N. Metaxas <sup>1</sup> \
-> <sup>1</sup> Rutgers University <sup>2</sup> Shanghai Artificial Intelligence Laboratory \
+> Yunhe Gao<sup>1</sup>, Zhuowei Li<sup>1</sup>, Di Liu <sup>1</sup>, Mu Zhou<sup>1</sup>, Shaoting Zhang<sup>2</sup>, Dimitris N. Metaxas <sup>1</sup> \
+> <sup>1</sup> Rutgers University   <sup>2</sup> Shanghai Artificial Intelligence Laboratory
 
 ![img](figs/training_paradigm.png)
 
@@ -33,8 +34,8 @@ A major enduring focus of clinical workflows is disease analytics and diagnosis,
 
 1. Clone the repository:
     ```
-    git clone https://github.com/your-username/Hermes.git
-    cd Hermes
+    git clone https://github.com/yhygao/universal-medical-image-segmentation.git
+    cd universal-medical-image-segmentation
     ```
 
 2. Install the required packages:
