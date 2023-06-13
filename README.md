@@ -1,6 +1,9 @@
-# Universal Medical Image Segmentation
+# Universal Medical Image Segmentation [![arXiv](https://img.shields.io/badge/📃-arXiv-ff69b4)](https://arxiv.org/pdf/2305.11147.pdf)
 
-![Hermes logo](link-to-logo.png)
+<div align="center">
+    <a><img src="figs/rutgers-logo.png"  height="100px" ></a>
+</div>
+
 
 This repository if the official implementation for the paper: [Training Like a Medical Resident: Universal Medical Image Segmentation via Context Prior Learning](https://arxiv.org/abs/2306.02416)
 
