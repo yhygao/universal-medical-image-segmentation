@@ -12,7 +12,7 @@ This repository if the official implementation for the paper:
 
 ![img](figs/training_paradigm.png)
 
-## Introduction
+## Abstract
 
 A major enduring focus of clinical workflows is disease analytics and diagnosis, leading to medical imaging datasets where the modalities and annotations are strongly tied to specific clinical objectives. To date, building task-specific segmentation models is intuitive yet a restrictive approach, lacking insights gained from widespread imaging cohorts. Inspired by the training of medical residents, we explore universal medical image segmentation, whose goal is to learn from diverse medical imaging sources covering a range of clinical targets, body regions, and image modalities. Following this paradigm, we propose Hermes, a context prior learning approach that addresses the challenges related to the heterogeneity on data, modality, and annotations in the proposed universal paradigm. In a collection of seven diverse datasets, we demonstrate the appealing merits of the universal paradigm over the traditional task-specific training paradigm. By leveraging the synergy among various tasks, Hermes shows superior performance and model scalability. Our in-depth investigation on two additional datasets reveals Hermes' strong capabilities for transfer learning, incremental learning, and generalization to different downstream tasks.
 
@@ -22,49 +22,10 @@ A major enduring focus of clinical workflows is disease analytics and diagnosis,
 * 06/04/2023: [Hermes](https://arxiv.org/abs/2306.02416) paper uploaded to arXiv
 
 
-
-## Getting Started
-
-### Prerequisites
-
-- PyTorch 2.0
-- Apex
-- Other dependencies: `pip install -r requirements.txt`
-
-1. Clone the repository:
-    ```
-    git clone https://github.com/yhygao/universal-medical-image-segmentation.git
-    cd universal-medical-image-segmentation
-    ```
-
-2. Install the required packages:
-    ```
-    pip install -r requirements.txt
-    ```
-
-### Dataset Preparation
-
-
-### Training
-
-To train Hermes on your datasets, use the following command:
-
-```bash
-python train.py --config=configs/your_config_file.yaml
-```
-
-### Evaluation
-
-To evaluate the model on your test datasets, use the following command:
-
-```bash
-python evaluate.py --config=configs/your_config_file.yaml --checkpoint=path/to/your/model.pth
-```
-
-## Documentation
-
-For more detailed usage and additional functionality, please check our [wiki](https://github.com/your-username/Hermes/wiki).
-
+## To Do
+* Release data preparation script.
+* Release training code.
+* Release model weights.
 
 ## Citation
 
@@ -81,5 +42,5 @@ If you use Hermes in your research, please cite our paper:
 
 ## Contact
 
-For questions and suggestions, please post a GitHub issue or contact us directly via email (your-email@example.com).
+For questions and suggestions, please post a GitHub issue or contact us directly via email (yunhe.gao@rutgers.edu).
 
