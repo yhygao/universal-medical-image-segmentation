@@ -2,6 +2,8 @@
 
 <div align="center">
     <a><img src="figs/rutgers-logo.png"  height="100px" ></a>
+    <a><img src="figs/shanghai_AI_lab.jpg"  height="100px" ></a>
+
 </div>
 
 
