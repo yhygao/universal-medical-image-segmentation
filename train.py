@@ -239,7 +239,6 @@ def train_epoch(trainLoader, net, ema_net, optimizer, epoch, writer, criterion_c
                 loss = loss_seg + args.loss_mod_weight * loss_mod
 
                 scaler.scale(loss).backward()
-                #torch.nn.utils.clip_grad_norm_(net.parameters(), max_norm=1)
                 scaler.step(optimizer)
                 scaler.update()
         else:
@@ -282,8 +281,6 @@ def train_epoch(trainLoader, net, ema_net, optimizer, epoch, writer, criterion_c
             iter_num_per_epoch += 1
             if iter_num_per_epoch > args.iter_per_epoch:
                 break
-
-        #torch.cuda.empty_cache()
 
         if is_master(args):
             writer.add_scalar('Train/Loss', epoch_loss.avg, epoch+1)

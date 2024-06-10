@@ -1,6 +1,3 @@
-
-
-
 train_test_split = { 
     'bcv_train': ['img0030', 'img0033',  'img0024', 'img0004', 'img0037', 'img0025', 'img0028', 'img0001', 'img0010', 'img0029', 'img0027', 'img0007', 'img0003', 'img0021', 'img0005', 'img0008', 'img0040', 'img0036', 'img0039', 'img0023', 'img0035', 'img0002', 'img0009'],
     'bcv_val': ['img0032'],

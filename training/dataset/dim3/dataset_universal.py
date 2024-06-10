@@ -88,7 +88,7 @@ class UniversalDataset(Dataset):
                     self.dataset_name_list.append(dataset_name)
             
             print(f"Finish loading {dataset_name}")
-        self.weight_list = self.weight_list# this need to be the same as in __len__
+        self.weight_list = self.weight_list # this need to be the same as in __len__
         print('All datasets load done, length of dataset:', len(self.img_list))
 
     def __len__(self):
@@ -105,14 +105,6 @@ class UniversalDataset(Dataset):
 
         np_img = np.load(self.img_list[idx], mmap_mode='r', allow_pickle=False)
         np_lab = np.load(self.lab_list[idx], mmap_mode='r', allow_pickle=False)
-        
-        '''
-        np_img = np.random.rand(320, 367, 387)
-        np_lab = np.random.rand(320, 367, 387)
-        np_lab[np_lab>0.5] = 1
-        np_lab[np_lab<0.5] = 0
-        np_lab = np_lab.astype(np.int8)
-        '''
 
         if self.mode == 'train':
             d, h, w= self.args.training_size
@@ -134,7 +126,7 @@ class UniversalDataset(Dataset):
             if np.random.random() < affine_prob:
                 # crop trick for faster augmentation
                 # crop a sub volume for scaling and rotation
-                # instead of scaling and rotating the whole image
+                # instead of scaling and rotating the whole image and then crop
                 tensor_img, tensor_lab = augmentation.random_scale_rotate_translate_3d(tensor_img, tensor_lab, self.args.scale, self.args.rotate, self.args.translate)
                 tensor_img, tensor_lab = augmentation.crop_3d(tensor_img, tensor_lab, self.args.training_size, mode='center')
             else:
@@ -142,17 +134,17 @@ class UniversalDataset(Dataset):
 
 
             if np.random.random() < color_prob:
-                tensor_img = augmentation.brightness_multiply(tensor_img, multiply_range=[0.7, 1.3]) #0.7 1.3
+                tensor_img = augmentation.brightness_multiply(tensor_img, multiply_range=[0.7, 1.3])
             if np.random.random() < color_prob:
                 tensor_img = augmentation.brightness_additive(tensor_img, std=0.1)
             if np.random.random() < color_prob:
-                tensor_img = augmentation.gamma(tensor_img, gamma_range=[0.7, 1.5]) #0.7 1.5
+                tensor_img = augmentation.gamma(tensor_img, gamma_range=[0.7, 1.5])
             if np.random.random() < color_prob:
-                tensor_img = augmentation.contrast(tensor_img, contrast_range=[0.7, 1.3]) #0.7 1.3
+                tensor_img = augmentation.contrast(tensor_img, contrast_range=[0.7, 1.3])
             if np.random.random() < color_prob:
-                tensor_img = augmentation.gaussian_blur(tensor_img, sigma_range=[0.5, 1.0]) #0.5 1.5
+                tensor_img = augmentation.gaussian_blur(tensor_img, sigma_range=[0.5, 1.0])
             if np.random.random() < color_prob:
-                std = np.random.random() * 0.1 #0.2
+                std = np.random.random() * 0.1
                 tensor_img = augmentation.gaussian_noise(tensor_img, std=std)
 
         else:
@@ -180,7 +172,6 @@ class UniversalDataset(Dataset):
     
     def label2binary(self, tensor_lab):
         # map the original label (0, 1, 2, ...)  to binary label maps
-        # need modification. Can't handle label index that doesn't follow accent order
 
         _, D, H, W = tensor_lab.shape
         
